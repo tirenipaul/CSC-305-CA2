@@ -151,6 +151,9 @@ fn my_entry_point(boot_info: &'static mut bootloader_api::BootInfo) -> ! {
 
     //For premptive multitasking, we use interrupts
     interrupts::init();
+    let input = input_str!("Tireni's string: ");
+    println!("\nString entered by Tireni '{}'", input);
+
 
     //Let's experience getting string from keyboard and saving into a variable for use
     print!("Enter string: ");
